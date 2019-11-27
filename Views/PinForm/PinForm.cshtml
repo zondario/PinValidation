@@ -1,4 +1,10 @@
 ﻿@{
     ViewData["Title"] = "PIN form";
 }
-<h1>This is a PIN form</h1>
+@model PinFormViewModel
+
+    <form asp-action="PinForm" asp-controller="PinForm">
+        <label asp-for="Pin"></label>
+        <input asp-for="Pin" placeholder="Enter your pin" />
+        <input type="submit" />
+    </form>

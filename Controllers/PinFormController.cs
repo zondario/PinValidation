@@ -16,5 +16,11 @@ namespace PINValidation.Controllers
         {
             return View();
         }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult PinForm(PinFormViewModel pinFormViewModel)
+        {
+            return View(pinFormViewModel);
+        }
     }
 }
