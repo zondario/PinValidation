@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PINValidation.Contracts.Validation;
+using PINValidation.DependencyInjection;
+using PINValidation.Validation;
+using PINValidation.Validation.Sections;
 
 namespace PINValidation
 {
@@ -23,6 +27,7 @@ namespace PINValidation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddPinValidator();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
