@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "PIN form";
+    string message = Model.Message;
+}
+@model PinFormViewModel
+@if (message.Length > 0)
+{
+    <p>@message</p>
+}
+<form asp-action="PinForm" asp-controller="PinForm">
+    <label asp-for="Pin"></label>
+    <input asp-for="Pin" placeholder="Enter your pin" />
+    <input type="submit" />
+</form>
