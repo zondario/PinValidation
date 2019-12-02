@@ -12,6 +12,7 @@ namespace PINValidation.Validation.Sections
         {
             this.Priority = priority;
         }
+
         public int Priority { get; private set; }
 
         public bool IsValid(string pin)

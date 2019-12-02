@@ -13,10 +13,12 @@ namespace PINValidation.Controllers
     public class PinFormController : Controller
     {
         private readonly IPinValidator _pinValidator;
+
         public PinFormController(IPinValidator pinValidator)
         {
             this._pinValidator = pinValidator;
         }
+
         public IActionResult PinForm()
         {
             return View(new PinFormViewModel());

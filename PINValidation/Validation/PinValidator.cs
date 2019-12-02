@@ -9,6 +9,7 @@ namespace PINValidation.Validation
     public class PinValidator : IPinValidator
     {
         private IList<IPinSectionValidator> _validators;
+
         public PinValidator(IList<IPinSectionValidator> validators)
         {
             validators = validators.OrderBy(t => t.Priority).ToList();
